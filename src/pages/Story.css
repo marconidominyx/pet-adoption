@@ -1,0 +1,247 @@
+/* src/pages/Story.css */
+
+.story-page {
+	font-family: "Inter", sans-serif;
+	color: #333;
+	line-height: 1.6;
+	padding: 2rem 0;
+	background-color: #f9f9f9;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 1rem;
+}
+
+/* Hero Section */
+.story-hero {
+	position: relative;
+	text-align: center;
+	padding: 6rem 0;
+	background: url("/images/Bacolod-5.png") no-repeat center center/cover;
+	color: white;
+	border-radius: 16px;
+	overflow: hidden;
+	margin-bottom: 4rem;
+}
+
+.story-hero-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 1;
+}
+
+.story-hero-content {
+	position: relative;
+	z-index: 2;
+}
+
+.story-hero-badge {
+	display: inline-block;
+	background-color: rgba(255, 255, 255, 0.1);
+	padding: 0.5rem 1rem;
+	border-radius: 20px;
+	margin-bottom: 1rem;
+	font-weight: 600;
+}
+
+.story-hero-title {
+	font-size: 3rem;
+	font-weight: 800;
+	margin-bottom: 0.5rem;
+}
+
+.story-hero-subtitle {
+	font-size: 1.5rem;
+	font-weight: 400;
+}
+
+/* General Section Styling */
+.story-section,
+.rescue-section,
+.problem-section,
+.mission-section,
+.vision-section,
+.what-we-do-section,
+.help-section {
+	padding: 4rem 0;
+	background-color: #fff;
+	margin-bottom: 2rem;
+	border-radius: 16px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.section-title {
+	text-align: center;
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-bottom: 3rem;
+	color: #2c3e50;
+}
+
+/* Content Layouts */
+.story-content,
+.problem-content,
+.mission-content,
+.vision-content,
+.what-we-do-content,
+.help-content {
+	display: flex;
+	align-items: center;
+	gap: 4rem;
+}
+
+/* Alternating Layout */
+.vision-content {
+	flex-direction: row-reverse;
+}
+.what-we-do-content {
+	flex-direction: row-reverse;
+}
+
+.story-text,
+.problem-text,
+.mission-text,
+.vision-text,
+.what-we-do-text,
+.help-text {
+	flex: 1;
+}
+
+.story-image,
+.problem-image,
+.mission-image,
+.vision-image,
+.what-we-do-image,
+.help-image {
+	flex: 1;
+}
+
+.story-img,
+.problem-img,
+.mission-img,
+.vision-img,
+.what-we-do-img,
+.help-img {
+	width: 100%;
+	border-radius: 12px;
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.story-title {
+	font-size: 2rem;
+	font-weight: 700;
+	margin-bottom: 1.5rem;
+}
+
+.story-description {
+	font-size: 1.1rem;
+	margin-bottom: 1rem;
+}
+
+.story-btn,
+.involve-btn,
+.donate-btn-large {
+	background-color: #3498db;
+	color: white;
+	padding: 0.8rem 1.5rem;
+	border: none;
+	border-radius: 8px;
+	font-size: 1rem;
+	font-weight: 600;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.story-btn:hover,
+.involve-btn:hover,
+.donate-btn-large:hover {
+	background-color: #2980b9;
+}
+
+/* Rescue Grid */
+.rescue-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 2rem;
+}
+
+.rescue-item {
+	text-align: center;
+}
+
+.rescue-img {
+	width: 100%;
+	border-radius: 12px;
+	margin-bottom: 1rem;
+}
+
+.rescue-text {
+	font-size: 1rem;
+}
+
+/* Lists */
+.problem-list,
+.what-we-do-list,
+.help-list {
+	list-style: none;
+	padding: 0;
+	font-size: 1.1rem;
+}
+
+.problem-list li,
+.what-we-do-list li,
+.help-list li {
+	margin-bottom: 0.75rem;
+	padding-left: 1.5rem;
+	position: relative;
+}
+
+.problem-list li::before,
+.what-we-do-list li::before,
+.help-list li::before {
+	content: "✔";
+	color: #27ae60;
+	position: absolute;
+	left: 0;
+}
+
+.what-we-do-list li::before {
+	content: "🐾";
+	color: #3498db;
+}
+.help-list li::before {
+	content: "❤️";
+	color: #e74c3c;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+	.story-content,
+	.problem-content,
+	.mission-content,
+	.vision-content,
+	.what-we-do-content,
+	.help-content {
+		flex-direction: column;
+		gap: 2rem;
+	}
+
+	.vision-content,
+	.what-we-do-content {
+		flex-direction: column; /* Keep it consistent on mobile */
+	}
+
+	.story-hero-title {
+		font-size: 2.5rem;
+	}
+
+	.section-title {
+		font-size: 2rem;
+	}
+}
