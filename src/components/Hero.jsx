@@ -1,6 +1,9 @@
 import React from "react";
+import CountUp from "react-countup";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
+	const navigate = useNavigate();
 	return (
 		<section className="hero">
 			<div className="hero-background">
@@ -20,26 +23,40 @@ const Hero = () => {
 						with love, care, and endless joy.
 					</p>
 					<div className="hero-actions">
-						<button aria-label="Adopt a pet" className="cta-button primary">
+						<button
+							aria-label="Adopt a pet"
+							className="cta-button primary"
+							onClick={() => navigate("/adopt")}
+						>
 							<span className="btn-icon">🏠</span>
 							Bring Home Love
 						</button>
-						<button aria-label="Learn more" className="cta-button secondary">
+						<button
+							aria-label="Learn more"
+							className="cta-button secondary"
+							onClick={() => navigate("/story")}
+						>
 							<span className="btn-icon">❤️</span>
-							Learn More
+							Learn more of us
 						</button>
 					</div>
 					<div className="hero-stats">
 						<div className="stat-item">
-							<div className="stat-number">500+</div>
+							<div className="stat-number">
+								<CountUp end={500} duration={2.5} suffix="+" />
+							</div>
 							<div className="stat-label">Pets Rescued</div>
 						</div>
 						<div className="stat-item">
-							<div className="stat-number">300+</div>
+							<div className="stat-number">
+								<CountUp end={300} duration={2.5} suffix="+" />
+							</div>
 							<div className="stat-label">Happy Adoptions</div>
 						</div>
 						<div className="stat-item">
-							<div className="stat-number">50+</div>
+							<div className="stat-number">
+								<CountUp end={50} duration={2.5} suffix="+" />
+							</div>
 							<div className="stat-label">Volunteers</div>
 						</div>
 					</div>

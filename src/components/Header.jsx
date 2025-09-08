@@ -47,9 +47,14 @@ const Header = ({ onDonateClick }) => {
 						>
 							Our Story
 						</Link>
-						<a href="#adopt" className="nav-link">
+						<Link
+							to="/adopt"
+							className={`nav-link ${
+								location.pathname === "/adopt" ? "active" : ""
+							}`}
+						>
 							Adopt
-						</a>
+						</Link>
 						<Link to="/signup" className="nav-link">
 							Get Involved
 						</Link>

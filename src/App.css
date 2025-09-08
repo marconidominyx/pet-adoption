@@ -1071,7 +1071,7 @@ body {
 }
 
 .involve-btn {
-	background: var(--success-color);
+	background: var(--accent-color);
 	color: white;
 	border: none;
 	padding: var(--space-sm) var(--space-lg);
@@ -1084,7 +1084,7 @@ body {
 }
 
 .involve-btn:hover {
-	background: #0e6e0e;
+	background: var(--accent-dark);
 	box-shadow: var(--shadow-md);
 	transform: translateY(-1px);
 }

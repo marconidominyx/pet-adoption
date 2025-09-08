@@ -12,6 +12,7 @@ import AuthModal from "./components/AuthModal";
 import DonationModal from "./components/DonationModal";
 import Home from "./pages/Home";
 import Story from "./pages/Story";
+import Adopt from "./pages/Adopt";
 
 function AppContent() {
 	const location = useLocation();
@@ -56,6 +57,7 @@ function AppContent() {
 				<Routes>
 					<Route path="/" element={<Home />} />
 					<Route path="/story" element={<Story />} />
+					<Route path="/adopt" element={<Adopt />} />
 					<Route path="/signin" element={<Home />} />
 					<Route path="/signup" element={<Home />} />
 				</Routes>

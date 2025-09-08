@@ -1,6 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
-const OurStory = () => {
+const OurStory = ({ onDonateClick, onGetInvolved }) => {
+	const navigate = useNavigate();
 	return (
 		<div className="story-page">
 			{/* Hero Story Section */}
@@ -49,7 +51,9 @@ const OurStory = () => {
 								they deserve. Our mission is to build a community where every
 								pet finds their forever home.
 							</p>
-							<button className="story-btn">Read Our Story</button>
+							<button className="story-btn" onClick={onGetInvolved}>
+								Read Our Story
+							</button>
 						</div>
 					</div>
 				</div>
@@ -183,7 +187,9 @@ const OurStory = () => {
 								<li>👥 Build a community of animal advocates</li>
 								<li>📚 Educate the public about responsible pet ownership</li>
 							</ul>
-							<button className="involve-btn">Get Involved With Us</button>
+							<button className="involve-btn" onClick={onGetInvolved}>
+								Get Involved With Us
+							</button>
 						</div>
 						<div className="what-we-do-image">
 							<img
@@ -215,7 +221,9 @@ const OurStory = () => {
 								<li>💝 Donate to support our mission</li>
 								<li>📢 Share our story and spread awareness</li>
 							</ul>
-							<button className="donate-btn-large">Donate Here</button>
+							<button className="donate-btn-large" onClick={onDonateClick}>
+								Donate Here
+							</button>
 						</div>
 						<div className="help-image">
 							<img
