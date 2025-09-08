@@ -40,50 +40,7 @@ const Header = ({ onDonateClick }) => {
 							</small>
 						</span>
 					</Link>
-					<div className="desktop-actions">
-						<button className="donate-btn" onClick={onDonateClick}>
-							<span className="donate-icon">❤️</span>
-							Donate Today
-						</button>
-						{!isLoggedIn ? (
-							<Link to="/signup" className="signin-btn">
-								Sign Up
-							</Link>
-						) : (
-							<div className="profile-container">
-								<button className="profile-btn" onClick={toggleProfile}>
-									<div className="profile-avatar">
-										<span className="profile-initial">J</span>
-									</div>
-								</button>
-								{isProfileOpen && (
-									<div className="profile-dropdown">
-										<div className="profile-dropdown-item">
-											<Link to="/profile" className="profile-link">
-												<i className="profile-link-icon">👤</i>
-												My Profile
-											</Link>
-										</div>
-										<div className="profile-dropdown-item">
-											<Link to="/settings" className="profile-link">
-												<i className="profile-link-icon">⚙️</i>
-												Settings
-											</Link>
-										</div>
-										<div className="profile-dropdown-item">
-											<button
-												onClick={handleSignOut}
-												className="profile-link signout"
-											>
-												<i className="profile-link-icon">🚪</i>
-												Sign Out
-											</button>
-										</div>
-									</div>
-								)}
-							</div>
-						)}
-					</div>
+
 					<button
 						className={`menu-toggle ${isMenuOpen ? "active" : ""}`}
 						onClick={() => setIsMenuOpen(!isMenuOpen)}

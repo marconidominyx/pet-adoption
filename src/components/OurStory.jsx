@@ -33,7 +33,10 @@ const OurStory = ({ onDonateClick, onGetInvolved }) => {
 			{/* Our Story Section */}
 			<section className="story-section">
 				<div className="container">
-					<div ref={storyRef} className={`story-content ${isStoryVisible ? 'visible' : ''}`}
+					<div
+						ref={storyRef}
+						className={`story-content ${isStoryVisible ? "visible" : ""}`}
+					>
 						<div className="story-image">
 							<img
 								src="/images/image 1.png"
@@ -132,7 +135,10 @@ const OurStory = ({ onDonateClick, onGetInvolved }) => {
 			{/* Our Mission */}
 			<section className="mission-section">
 				<div className="container">
-					<div ref={missionRef} className={`mission-content ${isMissionVisible ? 'visible' : ''}`}
+					<div
+						ref={missionRef}
+						className={`mission-content ${isMissionVisible ? "visible" : ""}`}
+					>
 						<div className="mission-text">
 							<h2 className="section-title">Our Mission</h2>
 							<p className="mission-description">
@@ -156,7 +162,10 @@ const OurStory = ({ onDonateClick, onGetInvolved }) => {
 			{/* Our Vision */}
 			<section className="vision-section">
 				<div className="container">
-					<div ref={visionRef} className={`vision-content ${isVisionVisible ? 'visible' : ''}`}
+					<div
+						ref={visionRef}
+						className={`vision-content ${isVisionVisible ? "visible" : ""}`}
+					>
 						<div className="vision-image">
 							<img
 								src="/images/image 3.png"
