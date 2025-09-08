@@ -1,8 +1,12 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
 
 const OurStory = ({ onDonateClick, onGetInvolved }) => {
 	const navigate = useNavigate();
+	const [storyRef, isStoryVisible] = useIntersectionObserver();
+	const [missionRef, isMissionVisible] = useIntersectionObserver();
+	const [visionRef, isVisionVisible] = useIntersectionObserver();
 	return (
 		<div className="story-page">
 			{/* Hero Story Section */}
@@ -29,7 +33,7 @@ const OurStory = ({ onDonateClick, onGetInvolved }) => {
 			{/* Our Story Section */}
 			<section className="story-section">
 				<div className="container">
-					<div className="story-content">
+					<div ref={storyRef} className={`story-content ${isStoryVisible ? 'visible' : ''}`}
 						<div className="story-image">
 							<img
 								src="/images/image 1.png"
@@ -128,7 +132,7 @@ const OurStory = ({ onDonateClick, onGetInvolved }) => {
 			{/* Our Mission */}
 			<section className="mission-section">
 				<div className="container">
-					<div className="mission-content">
+					<div ref={missionRef} className={`mission-content ${isMissionVisible ? 'visible' : ''}`}
 						<div className="mission-text">
 							<h2 className="section-title">Our Mission</h2>
 							<p className="mission-description">
@@ -152,7 +156,7 @@ const OurStory = ({ onDonateClick, onGetInvolved }) => {
 			{/* Our Vision */}
 			<section className="vision-section">
 				<div className="container">
-					<div className="vision-content">
+					<div ref={visionRef} className={`vision-content ${isVisionVisible ? 'visible' : ''}`}
 						<div className="vision-image">
 							<img
 								src="/images/image 3.png"
