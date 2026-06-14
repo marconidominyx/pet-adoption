@@ -8,11 +8,11 @@ const stories = [
 ];
 
 const Stories = () => (
-	<div className="page">
+	<div className="page stories-page">
 		<section className="page-hero">
 			<div className="wrap page-hero-grid">
-				<div><span className="eyebrow">Happy endings</span><h1 className="display">Plot twists we love.</h1></div>
-				<div className="page-hero-copy"><p>Rescue stories rarely begin neatly. That is what makes these new chapters feel so good.</p></div>
+				<div><span className="eyebrow">Success stories</span><h1 className="display">The afterglow.</h1></div>
+				<div className="page-hero-copy"><p>Where difficult chapters end and beautiful new narratives begin. These are the lives that found one another.</p></div>
 			</div>
 		</section>
 		<section className="section">

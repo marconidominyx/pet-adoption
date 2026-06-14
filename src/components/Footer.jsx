@@ -5,8 +5,8 @@ const Footer = () => (
 		<div className="wrap">
 			<div className="footer-top">
 				<div className="footer-brand">
-					<h2 className="display">Stay kind.</h2>
-					<p>Rescue is a team sport. Follow the field notes, meet a new friend, or help us keep every bowl full.</p>
+					<h2 className="display">Oasis Pets.</h2>
+					<p>Elevating animal companionship through compassion, thoughtful matches, and profound respect.</p>
 					<div className="footer-location"><span className="material-symbols-outlined">location_on</span><span>Butuan City, Philippines<small>Our rescue community</small></span></div>
 				</div>
 				<div className="footer-col">

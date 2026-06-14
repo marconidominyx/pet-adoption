@@ -15,12 +15,12 @@ const Adopt = () => {
 	const filteredPets = activeFilter === "All" ? pets : pets.filter((pet) => pet.type === activeFilter);
 
 	return (
-		<div className="page">
+		<div className="page adopt-page">
 			<section className="page-hero">
 				<div className="wrap page-hero-grid">
-					<div><span className="eyebrow">Available now</span><h1 className="display">Meet the pets.</h1></div>
+					<div><span className="eyebrow">Available souls</span><h1 className="display">Find your kindred spirit.</h1></div>
 					<div className="page-hero-copy">
-						<p>Take your time. Read the notes. Look into those eyes. The best friendships have a funny way of announcing themselves.</p>
+						<p>Every soul in our sanctuary has a story. Take your time, read the field notes, and let the right connection announce itself.</p>
 						<div className="filters">
 							{["All", "Dog", "Cat"].map((filter) => <button key={filter} className={`filter ${activeFilter === filter ? "active" : ""}`} onClick={() => setActiveFilter(filter)}>{filter === "All" ? "Everyone" : `${filter}s`}</button>)}
 						</div>

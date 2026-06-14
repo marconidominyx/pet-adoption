@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 
 const Philosophy = () => (
-	<div className="page">
+	<div className="page philosophy-page">
 		<section className="page-hero">
 			<div className="wrap page-hero-grid">
-				<div><span className="eyebrow">Our approach</span><h1 className="display">Care, with a point of view.</h1></div>
-				<div className="page-hero-copy"><p>A shelter should never feel like the end of the road. We build calm, trust, and genuine matches, one animal at a time.</p></div>
+				<div><span className="eyebrow">Our philosophy</span><h1 className="display">The Oasis mandate.</h1></div>
+				<div className="page-hero-copy"><p>Animal companionship is a soulful journey built on dignity, profound trust, and a genuine match between lives.</p></div>
 			</div>
 		</section>
 

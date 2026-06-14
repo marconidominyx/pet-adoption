@@ -23,10 +23,10 @@ const Donate = () => {
 	};
 
 	return (
-		<div className="page">
+		<div className="page donate-page">
 			<section className="page-hero donate-hero">
 				<div className="wrap page-hero-grid">
-					<div><span className="eyebrow">Ways to give</span><h1 className="display">Keep the bowls full.</h1></div>
+					<div><span className="eyebrow">Ways to give</span><h1 className="display">Empower the journey.</h1></div>
 					<div className="page-hero-copy"><p>Your contribution becomes food, medicine, safe transport, clean spaces, and a little more time to find exactly the right home.</p></div>
 				</div>
 			</section>

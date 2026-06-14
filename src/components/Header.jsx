@@ -2,9 +2,9 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 const links = [
-	["/philosophy", "Our approach"],
-	["/adopt", "Meet the pets"],
-	["/stories", "Happy endings"],
+	["/philosophy", "Philosophy"],
+	["/adopt", "Available souls"],
+	["/stories", "The afterglow"],
 ];
 
 const Header = () => {
@@ -16,7 +16,7 @@ const Header = () => {
 			<div className="wrap header-inner">
 				<Link to="/" className="brand" onClick={() => setIsMenuOpen(false)}>
 					<span className="brand-mark material-symbols-outlined">pets</span>
-					<span>Oasis Pets<small>Butuan rescue collective</small></span>
+					<span>Oasis Pets<small>For every soul, a sanctuary</small></span>
 				</Link>
 
 				<nav className="main-nav" aria-label="Main navigation">
@@ -28,7 +28,7 @@ const Header = () => {
 				</nav>
 
 				<div className="header-actions">
-					<Link to="/donate" className="header-give">Give a little love</Link>
+					<Link to="/donate" className="header-give">Ways to give</Link>
 					<button className="menu-button" onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label="Toggle menu" aria-expanded={isMenuOpen}>
 						<span className="material-symbols-outlined">{isMenuOpen ? "close" : "menu"}</span>
 					</button>
