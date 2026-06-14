@@ -10,16 +10,16 @@ const DonationModal = ({ isOpen, onClose }) => {
 			name: "GCash",
 			icon: "💳",
 			details: [
-				{ label: "Account Name", value: "Marconi Dominyx Asis" },
-				{ label: "Account Number", value: "09770433448" },
+				{ label: "Account Name", value: import.meta.env.VITE_GCASH_NAME || "Oasis Pets Sanctuary" },
+				{ label: "Account Number", value: import.meta.env.VITE_GCASH_NUMBER || "0000-000-0000" },
 			],
 		},
 		binance: {
 			name: "Binance",
 			icon: "🏦",
 			details: [
-				{ label: "Name", value: "Dominyx" },
-				{ label: "Account Number", value: "250425055" },
+				{ label: "Name", value: import.meta.env.VITE_BINANCE_NAME || "Oasis Pets" },
+				{ label: "Account Number", value: import.meta.env.VITE_BINANCE_NUMBER || "000000000" },
 			],
 		},
 		crypto: {
@@ -28,27 +28,27 @@ const DonationModal = ({ isOpen, onClose }) => {
 			details: [
 				{
 					label: "BSC (BEP20)",
-					value: "0x927e3f1ad89d68c13a50c4e54dc4d5a9eeb8b8f6",
+					value: import.meta.env.VITE_CRYPTO_BSC_WALLET || "0x0000000000000000000000000000000000000000",
 					network: "BSC (BEP20)",
 				},
 				{
 					label: "TRX (TRC20)",
-					value: "TSkPDn3ii6wrFnKZ4hKBjkoaZfyeU8YkQd",
+					value: import.meta.env.VITE_CRYPTO_TRX_WALLET || "T000000000000000000000000000000000",
 					network: "TRX (TRC20)",
 				},
 				{
 					label: "ETH (ERC20)",
-					value: "0x927e3f1ad89d68c13a50c4e54dc4d5a9eeb8b8f6",
+					value: import.meta.env.VITE_CRYPTO_ETH_WALLET || "0x0000000000000000000000000000000000000000",
 					network: "ETH (ERC20)",
 				},
 				{
 					label: "Matic (PoS)",
-					value: "0x927e3f1ad89d68c13a50c4e54dc4d5a9eeb8b8f6",
+					value: import.meta.env.VITE_CRYPTO_MATIC_WALLET || "0x0000000000000000000000000000000000000000",
 					network: "Matic (PoS)",
 				},
 				{
 					label: "Solana (SOL)",
-					value: "6wHvkK7vHp2K4imMEmk3UHf6y8ZXEDQg6pGeoQBdJLBJ",
+					value: import.meta.env.VITE_CRYPTO_SOL_WALLET || "SolanaWalletAddressPlaceholder1111111111",
 					network: "Solana (SOL)",
 				},
 			],
