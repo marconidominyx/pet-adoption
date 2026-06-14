@@ -1,9 +1,7 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
 
 const OurStory = ({ onDonateClick, onGetInvolved }) => {
-	const navigate = useNavigate();
 	const [storyRef, isStoryVisible] = useIntersectionObserver();
 	const [missionRef, isMissionVisible] = useIntersectionObserver();
 	const [visionRef, isVisionVisible] = useIntersectionObserver();

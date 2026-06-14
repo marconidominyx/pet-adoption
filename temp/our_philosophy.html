@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Our Philosophy - Oasis Pets</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&amp;family=Playfair+Display:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-high": "#efe6e2",
+                        "on-surface": "#1e1b18",
+                        "primary-container": "#0a261f",
+                        "inverse-primary": "#afcdc2",
+                        "tertiary-fixed": "#e6e2dd",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-variant": "#e9e1dc",
+                        "on-primary-fixed-variant": "#314c44",
+                        "surface-container": "#f5ece7",
+                        "on-secondary-fixed": "#370e00",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed": "#042019",
+                        "surface-dim": "#e1d8d4",
+                        "inverse-surface": "#34302c",
+                        "surface": "#fff8f5",
+                        "secondary": "#8d4d32",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed": "#1c1c19",
+                        "on-secondary-fixed-variant": "#71361d",
+                        "on-background": "#1e1b18",
+                        "secondary-container": "#feaa88",
+                        "outline": "#727975",
+                        "surface-tint": "#49645b",
+                        "on-surface-variant": "#424845",
+                        "on-secondary": "#ffffff",
+                        "on-primary-container": "#728f85",
+                        "on-tertiary-fixed-variant": "#484743",
+                        "on-secondary-container": "#783c22",
+                        "surface-container-low": "#fbf2ed",
+                        "surface-bright": "#fff8f5",
+                        "error": "#ba1a1a",
+                        "tertiary-fixed-dim": "#c9c6c1",
+                        "surface-container-highest": "#e9e1dc",
+                        "tertiary-container": "#22211e",
+                        "primary": "#000e09",
+                        "tertiary": "#0b0a08",
+                        "on-tertiary-container": "#8a8884",
+                        "on-error": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed-dim": "#ffb598",
+                        "primary-fixed": "#cbe9de",
+                        "on-error-container": "#93000a",
+                        "inverse-on-surface": "#f8efea",
+                        "outline-variant": "#c1c8c4",
+                        "primary-fixed-dim": "#afcdc2",
+                        "background": "#fff8f5",
+                        "secondary-fixed": "#ffdbce"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "margin-desktop": "64px",
+                        "base": "8px",
+                        "gutter": "32px",
+                        "section-gap": "120px",
+                        "margin-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Manrope"],
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "body-md": ["Manrope"],
+                        "display-lg": ["Playfair Display"],
+                        "button": ["Manrope"],
+                        "label-caps": ["Manrope"],
+                        "headline-md": ["Playfair Display"],
+                        "display-md": ["Playfair Display"],
+                        "headline-lg": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["20px", { "lineHeight": "32px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "26px", "fontWeight": "400" }],
+                        "display-lg": ["84px", { "lineHeight": "92px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "button": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700" }],
+                        "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "500" }],
+                        "display-md": ["60px", { "lineHeight": "68px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "headline-lg": ["48px", { "lineHeight": "56px", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="bg-surface w-full top-0 sticky border-b border-surface-variant z-50">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-24">
+<a class="flex items-center gap-4 hover:opacity-80 transition-opacity" href="{{DATA:SCREEN:SCREEN_5}}">
+<span aria-hidden="true" class="material-symbols-outlined text-primary text-3xl" data-icon="pets">pets</span>
+<span class="font-display-md text-display-md text-on-surface text-3xl md:text-5xl tracking-tight">Oasis Pets</span>
+</a>
+<nav aria-label="Main navigation" class="hidden md:flex gap-8 items-center">
+<a class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant hover:text-on-surface transition-colors duration-300" href="{{DATA:SCREEN:SCREEN_13}}">Available Souls</a>
+<a aria-current="page" class="font-label-caps text-label-caps uppercase tracking-widest text-secondary border-b border-secondary pb-1 transition-colors duration-300 opacity-80" href="{{DATA:SCREEN:SCREEN_11}}">Philosophy</a>
+<a class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant hover:text-on-surface transition-colors duration-300" href="{{DATA:SCREEN:SCREEN_2}}">Success Stories</a>
+</nav>
+<a class="bg-primary-container text-on-primary font-button text-button px-6 py-3 rounded hover:bg-opacity-90 transition-colors uppercase tracking-widest inline-flex items-center justify-center" href="{{DATA:SCREEN:SCREEN_8}}">Donate</a>
+</div>
+</header>
+<main>
+<!-- Hero: The Oasis Mandate -->
+<section class="w-full min-h-[707px] flex flex-col justify-center items-center px-margin-mobile md:px-margin-desktop py-section-gap relative">
+<div class="absolute inset-0 z-0 overflow-hidden">
+<img alt="Hero Background" class="w-full h-full object-cover object-center opacity-30 mix-blend-multiply" data-alt="A cinematic, high-end editorial photograph of a majestic dog standing gracefully in an open, sunlit field. The lighting is soft and golden, evoking warmth, profound trust, and quiet luxury. The palette is dominated by creamy parchment tones and deep forest greens. The composition uses expansive negative space to create a magazine-style, intellectual aesthetic suitable for a premium sanctuary brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiTylt4dQJypj_HnGtyfcgIT9WTNkKn-eWRPcKu-xXsDJQz5Pvv8jxFfGc8LmM1wtI_y_4kTkVdrt_vnQa4It10kY2AnRERevGRsf_aop8AeTJpkIK9tkAM-R2_quhlwaWRGYqMSjb2CnHmx1DmeJUzAADMSmF8EecGeNF95BV7Yi7GPaqFiLRwLdYjfdxPR5PHdbjGlRE1P-A894hKWykp6dn6PeM-jnwvFxSkU0RmHnuvWTyIfVgzLnpX_u7ggYflx75KVcLBg"/>
+</div>
+<div class="max-w-4xl mx-auto text-center relative z-10">
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest block mb-8">Our Philosophy</span>
+<h1 class="font-display-lg text-display-lg text-on-surface mb-8">The Oasis Mandate.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                    We believe animal companionship is a curated, soulful journey. Our sanctuary is built on a foundation of profound trust, offering every soul an elevated life.
+                </p>
+</div>
+</section>
+<!-- Story: Large Immersive Typography -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-8 md:col-start-3 text-center">
+<p class="font-headline-lg text-headline-lg text-on-surface leading-tight">
+                        "Every animal that walks through our doors is not just a rescue; they are a precious individual deserving of dignity, empathy, and a beautifully curated second chance."
+                    </p>
+</div>
+</div>
+</section>
+<!-- Dignity in Rescue (Asymmetric Image Left) -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-7 h-[600px] relative">
+<img alt="Dignity in Rescue" class="w-full h-full object-cover rounded-lg" data-alt="An intimate, beautifully lit portrait of an older rescue dog resting calmly on a textured, premium linen blanket. The composition is asymmetrical, focusing on the deep, soulful eyes of the animal. Soft, natural window light casts gentle shadows, emphasizing the organic warmth and compassionate personality of the brand. The color palette relies on minimalist creams, gentle clays, and muted forest tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtkMXN3zwGYRvO2Q1Eqx79LuwxT-lWSqpdHQmD4SUA4GG5Byc3MxgDh8pSM-TRH4YBjyQfa0z_L80KkttUM7esZvTj5wjy5S3YhURI1M7bUgn6yhez_Ph765XBv63Wn3l0Q5vBEcRop6sl3qfhsiqr3QtDLK4xJhTPuQ9dN_1nGdApcLTR9xTpdLjImEYUSJL0RQfYuKbrn28XnAsvjCto0zjEUvY5g7E6lL3hDoWW8k7appoIITYuBF_WW_dXSXqTE4iqeA9ckA"/>
+</div>
+<div class="md:col-span-4 md:col-start-9 space-y-6 mt-8 md:mt-0">
+<span aria-hidden="true" class="material-symbols-outlined text-secondary text-4xl mb-4 block" data-icon="favorite">favorite</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Dignity in Rescue</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        We reject the narrative of pity. Instead, we embrace a philosophy of profound respect. Our spaces are designed not as shelters, but as temporary sanctuaries where healing begins in an environment of quiet luxury and intentional care.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Curation of Kinship (Full Bleed/Bento style hint) -->
+<section class="w-full bg-surface-container-high py-section-gap">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-5 flex flex-col justify-center space-y-6 pr-0 md:pr-12">
+<span aria-hidden="true" class="material-symbols-outlined text-surface-tint text-4xl mb-4 block" data-icon="handshake">handshake</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Curation of Kinship</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Matching a soul with a family is an art form. We look beyond basic compatibility, curating connections based on energy, lifestyle, and a shared capacity for joy. It is a deliberate, intellectual process designed to foster lifelong bonds.
+                        </p>
+<a class="self-start mt-8 bg-transparent text-primary-container font-button text-button border border-outline px-8 py-3 rounded hover:bg-surface transition-colors tracking-widest uppercase inline-block" href="{{DATA:SCREEN:SCREEN_13}}">
+                            Read Our Process
+                        </a>
+</div>
+<div class="md:col-span-7 h-[500px] mt-12 md:mt-0">
+<img alt="Curation of Kinship" class="w-full h-full object-cover rounded" data-alt="A sophisticated, high-quality image showing a gentle interaction between a human hand and a cat's paw, captured in extreme, artistic close-up. The aesthetic is clean, modern, and minimalist, using significant negative space. The lighting is ethereal and bright, highlighting the delicate textures of fur and skin. The mood is serene, intellectual, and deeply connected, aligning with a premium editorial style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxYkq05D8-jwhIO-PYKNi2ThSW2KzfqVeh-v9pQRh65BpwTE-D7ZwCuxczyKhUy8WA-uu93FmrUGJNJQjBUQaMwtQfV5bc2ytBTAtnnElqg7XZOO9TZbigIZts_RFxQYpdBfaqtQURTTKVu93hfRmvCGYED9O_JtMcaP-FlVSTEZ_LGiF-lBKmQl1FN8M0Jr8_gTE2U4izSM25g2R_toMlT0P8_Fe8lp2L9NV64aJTD3_UwpcdJmyu-Q5NQiUBVIX2B5Ipnu3DYg"/>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary-container w-full py-section-gap mt-auto">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-4 flex flex-col space-y-6">
+<a class="font-display-md text-display-md text-surface-container-low text-4xl hover:opacity-80 transition-opacity" href="{{DATA:SCREEN:SCREEN_5}}">Oasis Pets</a>
+<p class="font-body-md text-body-md text-on-primary-container">
+                    © 2024 Oasis Pets. For every soul, a sanctuary.
+                </p>
+</div>
+<div class="md:col-span-8 md:col-start-6 flex flex-wrap gap-x-12 gap-y-6">
+<nav aria-label="Footer navigation" class="flex flex-col space-y-4">
+<a class="font-body-md text-body-md text-secondary-container font-bold hover:text-inverse-primary transition-colors" href="{{DATA:SCREEN:SCREEN_11}}">Philosophy</a>
+<a class="font-body-md text-body-md text-on-primary-container hover:text-inverse-primary transition-colors" href="{{DATA:SCREEN:SCREEN_13}}">Available Souls</a>
+<a class="font-body-md text-body-md text-on-primary-container hover:text-inverse-primary transition-colors" href="{{DATA:SCREEN:SCREEN_2}}">Success Stories</a>
+<a class="font-body-md text-body-md text-on-primary-container hover:text-inverse-primary transition-colors" href="{{DATA:SCREEN:SCREEN_8}}">Ways to Give</a>
+<a class="font-body-md text-body-md text-on-primary-container hover:text-inverse-primary transition-colors" href="#">Privacy Policy</a>
+</nav>
+</div>
+</div>
+</footer>
+</body></html>

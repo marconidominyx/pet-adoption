@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Available Souls - Oasis Pets</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&amp;family=Playfair+Display:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-high": "#efe6e2",
+                        "on-surface": "#1e1b18",
+                        "primary-container": "#0a261f",
+                        "inverse-primary": "#afcdc2",
+                        "tertiary-fixed": "#e6e2dd",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-variant": "#e9e1dc",
+                        "on-primary-fixed-variant": "#314c44",
+                        "surface-container": "#f5ece7",
+                        "on-secondary-fixed": "#370e00",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed": "#042019",
+                        "surface-dim": "#e1d8d4",
+                        "inverse-surface": "#34302c",
+                        "surface": "#fff8f5",
+                        "secondary": "#8d4d32",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed": "#1c1c19",
+                        "on-secondary-fixed-variant": "#71361d",
+                        "on-background": "#1e1b18",
+                        "secondary-container": "#feaa88",
+                        "outline": "#727975",
+                        "surface-tint": "#49645b",
+                        "on-surface-variant": "#424845",
+                        "on-secondary": "#ffffff",
+                        "on-primary-container": "#728f85",
+                        "on-tertiary-fixed-variant": "#484743",
+                        "on-secondary-container": "#783c22",
+                        "surface-container-low": "#fbf2ed",
+                        "surface-bright": "#fff8f5",
+                        "error": "#ba1a1a",
+                        "tertiary-fixed-dim": "#c9c6c1",
+                        "surface-container-highest": "#e9e1dc",
+                        "tertiary-container": "#22211e",
+                        "primary": "#000e09",
+                        "tertiary": "#0b0a08",
+                        "on-tertiary-container": "#8a8884",
+                        "on-error": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed-dim": "#ffb598",
+                        "primary-fixed": "#cbe9de",
+                        "on-error-container": "#93000a",
+                        "inverse-on-surface": "#f8efea",
+                        "outline-variant": "#c1c8c4",
+                        "primary-fixed-dim": "#afcdc2",
+                        "background": "#fff8f5",
+                        "secondary-fixed": "#ffdbce"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "margin-desktop": "64px",
+                        "base": "8px",
+                        "gutter": "32px",
+                        "section-gap": "120px",
+                        "margin-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Manrope"],
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "body-md": ["Manrope"],
+                        "display-lg": ["Playfair Display"],
+                        "button": ["Manrope"],
+                        "label-caps": ["Manrope"],
+                        "headline-md": ["Playfair Display"],
+                        "display-md": ["Playfair Display"],
+                        "headline-lg": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["20px", { "lineHeight": "32px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "26px", "fontWeight": "400" }],
+                        "display-lg": ["84px", { "lineHeight": "92px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "button": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700" }],
+                        "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "500" }],
+                        "display-md": ["60px", { "lineHeight": "68px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "headline-lg": ["48px", { "lineHeight": "56px", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .fill-icon {
+            font-variation-settings: 'FILL' 1;
+        }
+        
+        /* Editorial Image Scrim */
+        .editorial-scrim::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 50%;
+            background: linear-gradient(to top, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 100%);
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md antialiased selection:bg-secondary selection:text-on-secondary">
+<!-- TopAppBar -->
+<header class="w-full top-0 sticky bg-surface dark:bg-surface-dim border-b border-surface-variant dark:border-outline-variant z-50">
+<div class="max-w-container-max mx-auto px-margin-desktop flex justify-between items-center h-24 max-md:px-margin-mobile">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed text-2xl" data-icon="pets">pets</span>
+<a class="font-display-md text-display-md text-on-surface dark:text-inverse-on-surface tracking-tight" href="{{DATA:SCREEN:SCREEN_5}}" style="font-size: 32px; line-height: 40px;">Oasis Pets</a>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant hover:text-secondary transition-colors duration-300" href="{{DATA:SCREEN:SCREEN_11}}">Philosophy</a>
+<a class="font-label-caps text-label-caps uppercase tracking-widest text-secondary border-b border-secondary pb-1 opacity-80 transition-opacity" href="{{DATA:SCREEN:SCREEN_13}}">Available Souls</a>
+<a class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant hover:text-secondary transition-colors duration-300" href="{{DATA:SCREEN:SCREEN_2}}">Success Stories</a>
+</nav>
+<a class="inline-flex items-center justify-center bg-primary-container text-on-primary font-button text-button px-6 py-3 rounded hover:bg-surface-tint transition-colors uppercase tracking-widest border border-transparent" href="{{DATA:SCREEN:SCREEN_8}}">
+                Donate
+            </a>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="max-w-container-max mx-auto px-margin-desktop py-section-gap max-md:px-margin-mobile max-md:py-margin-desktop text-center">
+<span class="material-symbols-outlined text-secondary text-4xl mb-6" data-icon="auto_awesome">auto_awesome</span>
+<h1 class="font-display-lg text-display-lg max-md:font-headline-lg-mobile max-md:text-headline-lg-mobile text-on-surface mb-8 max-w-4xl mx-auto">
+                Find Your Kindred Spirit
+            </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-12">
+                Every soul in our sanctuary has a story. Browse our curated gallery to meet the extraordinary companions waiting to begin their next chapter with you.
+            </p>
+</section>
+<!-- Editorial Gallery Grid -->
+<section class="max-w-container-max mx-auto px-margin-desktop pb-section-gap max-md:px-margin-mobile max-md:pb-margin-desktop">
+<!-- Grid Layout -->
+<div class="grid grid-cols-12 gap-gutter mb-section-gap max-md:grid-cols-4 max-md:gap-margin-mobile items-end">
+<!-- Card 1 (Spans 5 cols) -->
+<article class="col-span-5 max-md:col-span-4 group cursor-pointer" onclick="window.location.href='{{DATA:SCREEN:SCREEN_2}}'">
+<div class="relative w-full aspect-[4/5] overflow-hidden rounded bg-surface-container-high mb-6 border border-surface-variant transition-colors group-hover:border-outline-variant">
+<img alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AP1WRLv574e_F9Wd7pE3G2YPKZbULRXtA4lkgjbTtckWCRZoAGpqAkqS1xFj6Ip7hsuR4vAH4OwnrqxMEJqawU-ygt5ZyMJ4vNDa5HTB7JObfgeeQGH3rXOssq1BBG1KtJhQoOsBaARyTMg2TZVc7cN184P9oIQ3GNOs0w5S8rydIMFJYJbAHGXXATokYSEF0yN89MQj7nA5Hp2VygLWhz8lChcGrHCfLb7SyvpEZGbeB5eXwVjdXY7LKATZkg"/>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="bg-surface-container px-3 py-1 rounded-full font-label-caps text-label-caps uppercase text-on-surface">Gentle</span>
+</div>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface mb-2">Barnaby</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">A thoughtful observer with a quiet, grounding presence.</p>
+<a class="flex items-center gap-2 text-secondary font-button text-button uppercase tracking-widest group-hover:text-primary transition-colors" href="{{DATA:SCREEN:SCREEN_2}}">
+                        View Story <span class="material-symbols-outlined text-sm" data-icon="arrow_right_alt">arrow_right_alt</span>
+</a>
+</article>
+<!-- Whitespace Column -->
+<div class="col-span-2 hidden md:block"></div>
+<!-- Card 2 (Spans 5 cols, offset bottom) -->
+<article class="col-span-5 max-md:col-span-4 group cursor-pointer pb-12 max-md:pb-0" onclick="window.location.href='{{DATA:SCREEN:SCREEN_2}}'">
+<div class="relative w-full aspect-square overflow-hidden rounded bg-surface-container-high mb-6 border border-surface-variant transition-colors group-hover:border-outline-variant">
+<img alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A striking portrait of a majestic dog, lit softly from the side against a neutral creamy parchment background. The photography is editorial and premium, with a shallow depth of field focusing on the dog's deeply expressive eyes. Warm, organic tones dominate the minimalist composition." src="https://lh3.googleusercontent.com/aida-public/AB6AXuByPKPqNv5cgSfFE_A1C-nZr3FO3_-zkKrDB-qKL3eK16gFoLK-VokTz7mkI57jAZG_xwmmmTpvi2dgrqEHfI683kuq_My-YPNxX8_wVY5h25KfAYGePfyJ0V5FkgVeVU8Q2wKMD78-Yl5Hnxm4BUqyzNJh7IX-cebArOYKvvRRLFaX3BL0jsTdIktBk7nHgCNS2rkyhFNxfpVVxZsVSafutmZKRWnlkwpkFU3JFU1zsdvkWY9JFGgzzH2VX1M5OhIqdQLHLzKhKA"/>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="bg-surface-container px-3 py-1 rounded-full font-label-caps text-label-caps uppercase text-on-surface">Spirited</span>
+</div>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface mb-2">Eleanor</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Radiant energy wrapped in an elegant, loyal silhouette.</p>
+<a class="flex items-center gap-2 text-secondary font-button text-button uppercase tracking-widest group-hover:text-primary transition-colors" href="{{DATA:SCREEN:SCREEN_2}}">
+                        View Story <span class="material-symbols-outlined text-sm" data-icon="arrow_right_alt">arrow_right_alt</span>
+</a>
+</article>
+</div>
+<!-- Emotional Break / Full Bleed Imagery -->
+<div class="w-full mb-section-gap">
+<div class="grid grid-cols-12 gap-gutter max-md:grid-cols-4 max-md:gap-margin-mobile items-center">
+<div class="col-span-7 max-md:col-span-4 relative aspect-[16/9] overflow-hidden rounded bg-surface-container-high">
+<img alt="" class="w-full h-full object-cover object-center" src="https://lh3.googleusercontent.com/aida/AP1WRLvS7ChycD_qOfZVfktkYbCsfhPYevxX7bXHp4cP0zDU8Rp1Oba-jZBG3GkXtrOMFO4zhMPgaDOWpLYmLyxgV2QdN9Ew7jIndS5rqGQeonj5faJxuDMe5iesysl_7eKbh_ZddNRn4113VAwpy9afQ0V2kEC1EE1pkoOBZRP_RztzWPd_B1oyIVm3vKlkbtoIrTmU32EhCQ17_GNo0d-XAjd7NGR1BmmoTjyRn07z-SA2Lo3NHfubqfOVHQ"/>
+</div>
+<div class="col-span-4 col-start-9 max-md:col-span-4 max-md:mt-8">
+<h3 class="font-headline-lg text-headline-lg max-md:font-headline-lg-mobile max-md:text-headline-lg-mobile text-on-surface mb-6">Connection<br/>Beyond Words.</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">
+                            We believe that true companionship is an art form. It’s found in the quiet moments, the shared glances, and the profound trust built over time.
+                        </p>
+<a class="inline-block border border-surface-tint text-surface-tint font-button text-button px-8 py-3 rounded hover:bg-surface-tint hover:text-on-primary transition-colors uppercase tracking-widest" href="{{DATA:SCREEN:SCREEN_11}}">
+                            Our Philosophy
+                        </a>
+</div>
+</div>
+</div>
+<!-- Grid Layout 2 -->
+<div class="grid grid-cols-12 gap-gutter mb-section-gap max-md:grid-cols-4 max-md:gap-margin-mobile">
+<!-- Card 3 (Spans 4 cols) -->
+<article class="col-span-4 max-md:col-span-4 group cursor-pointer mt-24 max-md:mt-0" onclick="window.location.href='{{DATA:SCREEN:SCREEN_2}}'">
+<div class="relative w-full aspect-[3/4] overflow-hidden rounded bg-surface-container-high mb-6 border border-surface-variant transition-colors group-hover:border-outline-variant">
+<img alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A close-up, highly detailed editorial photograph of a cat's face, specifically focusing on its mesmerizing eyes. The background is a stark, clean parchment color providing immense negative space. The lighting is cinematic and high-contrast, evoking a sense of luxury, quiet dignity, and intellectual depth." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC96vDH59n72DWBgNE1Z3ICECpSFagpyf64YRShrE_qPL_DtxafvgIk2RL7viwaaJa-iZFXp_ftd4vpGYfKpzL6u07HVjyGdxfLk-rni4y0CRNAvoNx6HS3VMESzZpWopVJeiZ2knauyT3ERYJ-lpwVIrKkMzJpJ9GuBYWRuk7Z7TbORAUfb4VTqTZ4y8SBMrk9F_zOLreLqEOUQi4kjhHtzZWrnZyFBATjcBXDEYx8OMr_FBzSGVJjoJwig0pEjQh3rlFGzsHaWg"/>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="bg-surface-container px-3 py-1 rounded-full font-label-caps text-label-caps uppercase text-on-surface">Independent</span>
+</div>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface mb-2">Sylvester</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">A dignified philosopher seeking a quiet, sunlit corner.</p>
+<a class="flex items-center gap-2 text-secondary font-button text-button uppercase tracking-widest group-hover:text-primary transition-colors" href="{{DATA:SCREEN:SCREEN_2}}">
+                        View Story <span class="material-symbols-outlined text-sm" data-icon="arrow_right_alt">arrow_right_alt</span>
+</a>
+</article>
+<!-- Card 4 (Spans 8 cols) -->
+<article class="col-span-8 max-md:col-span-4 group cursor-pointer" onclick="window.location.href='{{DATA:SCREEN:SCREEN_2}}'">
+<div class="relative w-full aspect-[21/9] max-md:aspect-[4/3] overflow-hidden rounded bg-surface-container-high mb-6 border border-surface-variant transition-colors group-hover:border-outline-variant editorial-scrim">
+<img alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A wide, landscape-format lifestyle photograph of two dogs running playfully across an open, grassy field. The lighting suggests early morning or late afternoon golden hour, creating a warm, sun-drenched clay atmosphere. The aesthetic is organic, expansive, and incredibly premium, capturing joy and freedom." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2Wnnb_F3jgtnuQuUHAQxLkQHwTXi8Wvr0wTB5tQ0hSDEnikb6JgrkX1Pv7SZNtKA_CyQEqZbkz3yuzNZFUhsaWFLgPyaDLrwz0ohOYa3lfAju9eMI_4Bl9EtweElASnacH_Q3IylSaHOaMykXo3avItW5A2SMPjoidZfX1bPI1k92ewcUrC6SZ9j_umPsFZjJRJbzQ2eRr88xXEtcwj70M9GgwseVR3-htI4tRv2QA4ILp3e6w-aN6y1aHK4VanRQMbKP2YeNzA"/>
+<div class="absolute bottom-6 left-6 z-10">
+<div class="flex gap-2 mb-4">
+<span class="bg-surface-container px-3 py-1 rounded-full font-label-caps text-label-caps uppercase text-on-surface">Bonded Pair</span>
+</div>
+<h2 class="font-display-md text-display-md text-on-primary mb-2">Jasper &amp; Finn</h2>
+</div>
+</div>
+<div class="grid grid-cols-2 max-md:grid-cols-1 gap-8">
+<p class="font-body-md text-body-md text-on-surface-variant">Inseparable companions whose joy is magnified when they are together. They share a profound rhythm of play and rest.</p>
+<a class="flex items-center justify-end max-md:justify-start gap-2 text-secondary font-button text-button uppercase tracking-widest group-hover:text-primary transition-colors" href="{{DATA:SCREEN:SCREEN_2}}">
+                            View Story <span class="material-symbols-outlined text-sm" data-icon="arrow_right_alt">arrow_right_alt</span>
+</a>
+</div>
+</article>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-gap bg-primary-container dark:bg-tertiary-container">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-12 gap-gutter max-md:grid-cols-4 max-md:px-margin-mobile">
+<div class="col-span-4 max-md:col-span-4 mb-8">
+<a class="font-display-md text-display-md text-surface-container-low tracking-tight mb-4 block" href="{{DATA:SCREEN:SCREEN_5}}" style="font-size: 32px; line-height: 40px;">Oasis Pets</a>
+<p class="font-body-md text-body-md text-surface-container-low opacity-80 mt-4 max-w-xs">
+                    © 2024 Oasis Pets. For every soul, a sanctuary.
+                 </p>
+</div>
+<div class="col-span-8 max-md:col-span-4 flex flex-wrap justify-end max-md:justify-start gap-x-12 gap-y-6">
+<a class="font-body-md text-body-md text-on-primary-container dark:text-on-tertiary-container hover:text-inverse-primary transition-colors" href="{{DATA:SCREEN:SCREEN_11}}">Philosophy</a>
+<a class="font-body-md text-body-md text-secondary-container font-bold hover:text-inverse-primary transition-colors" href="{{DATA:SCREEN:SCREEN_13}}">Available Souls</a>
+<a class="font-body-md text-body-md text-on-primary-container dark:text-on-tertiary-container hover:text-inverse-primary transition-colors" href="{{DATA:SCREEN:SCREEN_2}}">Success Stories</a>
+<a class="font-body-md text-body-md text-on-primary-container dark:text-on-tertiary-container hover:text-inverse-primary transition-colors" href="{{DATA:SCREEN:SCREEN_8}}">Ways to Give</a>
+<a class="font-body-md text-body-md text-on-primary-container dark:text-on-tertiary-container hover:text-inverse-primary transition-colors" href="#">Privacy Policy</a>
+</div>
+</div>
+</footer>
+</body></html>

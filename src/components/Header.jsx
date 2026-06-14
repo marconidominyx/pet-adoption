@@ -1,158 +1,50 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
-const Header = ({ onDonateClick }) => {
+const links = [
+	["/philosophy", "Our approach"],
+	["/adopt", "Meet the pets"],
+	["/stories", "Happy endings"],
+];
+
+const Header = () => {
 	const location = useLocation();
-	const [isProfileOpen, setIsProfileOpen] = useState(false);
-	const [isLoggedIn, setIsLoggedIn] = useState(false); // This would come from auth context
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-	const toggleProfile = () => {
-		setIsProfileOpen(!isProfileOpen);
-	};
-
-	const handleSignOut = () => {
-		setIsLoggedIn(false);
-		setIsProfileOpen(false);
-		// Handle sign out logic here
-	};
-
 	return (
-		<header className="header">
-			<div
-				className={`menu-overlay ${isMenuOpen ? "active" : ""}`}
-				onClick={() => setIsMenuOpen(false)}
-				aria-hidden="true"
-			/>
-			<div className="container">
-				<div className="header-content">
-					<Link to="/" className="logo">
-						<img
-							src="/images/logo.png"
-							alt="Oasis Shelter Logo"
-							className="logo-icon"
-						/>
-						<span>
-							<span className="logo-text">Oasis Shelter</span>
-							<br />
-							<small style={{ color: "#7a7a7a", fontWeight: 400 }}>
-								Rescue • Care • Home
-							</small>
-						</span>
-					</Link>
+		<header className="site-header">
+			<div className="wrap header-inner">
+				<Link to="/" className="brand" onClick={() => setIsMenuOpen(false)}>
+					<span className="brand-mark material-symbols-outlined">pets</span>
+					<span>Oasis Pets<small>Butuan rescue collective</small></span>
+				</Link>
 
-					<button
-						className={`menu-toggle ${isMenuOpen ? "active" : ""}`}
-						onClick={() => setIsMenuOpen(!isMenuOpen)}
-						aria-label="Toggle menu"
-					>
-						<span></span>
-						<span></span>
-						<span></span>
+				<nav className="main-nav" aria-label="Main navigation">
+					{links.map(([path, label]) => (
+						<Link key={path} to={path} className={`nav-link ${location.pathname === path ? "active" : ""}`}>
+							{label}
+						</Link>
+					))}
+				</nav>
+
+				<div className="header-actions">
+					<Link to="/donate" className="header-give">Give a little love</Link>
+					<button className="menu-button" onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label="Toggle menu" aria-expanded={isMenuOpen}>
+						<span className="material-symbols-outlined">{isMenuOpen ? "close" : "menu"}</span>
 					</button>
-					<nav className={`nav ${isMenuOpen ? "nav-open" : ""}`}>
-						<div className="nav-links">
-							<Link
-								to="/"
-								className={`nav-link ${
-									location.pathname === "/" ? "active" : ""
-								}`}
-								onClick={() => setIsMenuOpen(false)}
-							>
-								Home
-							</Link>
-							<Link
-								to="/story"
-								className={`nav-link ${
-									location.pathname === "/story" ? "active" : ""
-								}`}
-								onClick={() => setIsMenuOpen(false)}
-							>
-								Our Story
-							</Link>
-							<Link
-								to="/adopt"
-								className={`nav-link ${
-									location.pathname === "/adopt" ? "active" : ""
-								}`}
-								onClick={() => setIsMenuOpen(false)}
-							>
-								Adopt
-							</Link>
-							<Link
-								to="/signup"
-								className="nav-link"
-								onClick={() => setIsMenuOpen(false)}
-							>
-								Get Involved
-							</Link>
-						</div>
-						<div className="nav-actions">
-							<button
-								className="mobile-donate-btn"
-								onClick={() => {
-									onDonateClick();
-									setIsMenuOpen(false);
-								}}
-							>
-								<span className="donate-icon">❤️</span>
-								Donate Today
-							</button>
-							{!isLoggedIn && (
-								<Link
-									to="/signup"
-									className="mobile-signup-btn"
-									onClick={() => setIsMenuOpen(false)}
-								>
-									Sign Up
-								</Link>
-							)}
-						</div>
-					</nav>
-					<div className="header-actions desktop-actions">
-						<button className="donate-btn" onClick={onDonateClick}>
-							<span className="donate-icon">❤️</span>
-							Donate Today
-						</button>
-
-						{/* Profile Dropdown */}
-						<div className="profile-container">
-							{isLoggedIn ? (
-								<>
-									<button className="profile-btn" onClick={toggleProfile}>
-										<div className="profile-avatar">
-											<span className="profile-initial">U</span>
-										</div>
-									</button>
-									{isProfileOpen && (
-										<div className="profile-dropdown">
-											<div className="profile-dropdown-item">
-												<Link to="/profile" className="profile-link">
-													<span className="profile-link-icon">👤</span>
-													Profile
-												</Link>
-											</div>
-											<div className="profile-dropdown-item">
-												<button
-													className="profile-link signout"
-													onClick={handleSignOut}
-												>
-													<span className="profile-link-icon">🚪</span>
-													Sign Out
-												</button>
-											</div>
-										</div>
-									)}
-								</>
-							) : (
-								<Link to="/signin" className="signin-btn">
-									Sign In
-								</Link>
-							)}
-						</div>
-					</div>
 				</div>
 			</div>
+
+			{isMenuOpen && (
+				<nav className="mobile-menu" aria-label="Mobile navigation">
+					{links.map(([path, label]) => (
+						<Link key={path} to={path} className={`nav-link ${location.pathname === path ? "active" : ""}`} onClick={() => setIsMenuOpen(false)}>
+							{label}
+						</Link>
+					))}
+					<Link to="/donate" className="nav-link" onClick={() => setIsMenuOpen(false)}>Ways to give</Link>
+				</nav>
+			)}
 		</header>
 	);
 };
